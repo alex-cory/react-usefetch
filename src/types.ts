@@ -133,7 +133,7 @@ export interface Data<TData> {
 export interface ReqBase<TData> {
   data: TData | undefined
   loading: boolean
-  error: Error
+  error: Error | undefined
   cache: Cache
 }
 
