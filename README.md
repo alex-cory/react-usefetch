@@ -130,7 +130,7 @@ function Todos() {
       {loading && 'Loading...'}
       {todos.map(todo => (
         <div key={todo.id}>{todo.title}</div>
-      )}
+      ))}
     </>
   )
 }
@@ -157,7 +157,7 @@ function Todos() {
       {loading && 'Loading...'}
       {data.map(todo => (
         <div key={todo.id}>{todo.title}</div>
-      )}
+      ))}
     </>
   )
 }
