@@ -112,7 +112,7 @@ function useFetch<TData = any>(...args: UseFetchArgs): UseFetch<TData> {
         newData = await tryGetData(newRes, defaults.data, responseType)
         res.current.data = onNewData(data.current, newData)
 
-        res.current = interceptors.response ? await interceptors.response({ response: res.current }) : res.current
+        res.current = interceptors.response ? await interceptors.response({ response: res.current, request: requestInit }) : res.current
         invariant('data' in res.current, 'You must have `data` field on the Response returned from your `interceptors.response`')
         data.current = res.current.data as TData
 

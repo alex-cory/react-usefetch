@@ -163,7 +163,7 @@ export type UseFetch<TData> = UseFetchArrayReturn<TData> &
 
 export type Interceptors<TData = any> = {
   request?: ({ options, url, path, route }: { options: RequestInit, url?: string, path?: string, route?: string }) => Promise<RequestInit> | RequestInit
-  response?: ({ response }: { response: Res<TData> }) => Promise<Res<TData>>
+  response?: ({ response }: { response: Res<TData>, request: RequestInit }) => Promise<Res<TData>>
 }
 
 // this also holds the response keys. It mimics js Map
